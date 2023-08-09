@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SingleDelegate {
+  id                 Int      @id @default(autoincrement())
+  name               String
+  email              String   @unique
+  gender             String
+  country            String
+  phone1             String
+  phone2             String
+  course             String
+  college            String
+  age                Int
+  prevExp            String
+  accommodation      String
+  accommodation_type String?
+  year               Int
+  awards             String
+  createdAt          DateTime @default(now())
+  committees         Json
+}
+
+model DoubleDelegate {
+  id                 Int      @id @default(autoincrement())
+  s_name             String
+  d_name             String
+  s_email            String   @unique
+  d_email            String   @unique
+  s_gender           String
+  d_gender           String
+  s_year             Int
+  d_year             Int
+  s_country          String
+  d_country          String
+  s_phone1           String
+  s_phone2           String
+  d_phone1           String
+  d_phone2           String
+  s_course           String
+  d_course           String
+  s_college          String
+  d_college          String
+  s_age              Int
+  d_age              Int
+  s_prevExp          String
+  d_prevExp          String
+  s_awards           String
+  d_awards           String
+  accommodation      String
+  accommodation_type String?
+  createdAt          DateTime @default(now())
+  committees         Json
+}

@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "DoubleDelegate" ALTER COLUMN "s_year" SET DATA TYPE TEXT,
+ALTER COLUMN "d_year" SET DATA TYPE TEXT;
+
+-- AlterTable
+ALTER TABLE "SingleDelegate" ALTER COLUMN "year" SET DATA TYPE TEXT;

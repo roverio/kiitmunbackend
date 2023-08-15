@@ -24,7 +24,7 @@ model SingleDelegate {
   prevExp            String
   accommodation      String
   accommodation_type String?
-  year               Int
+  year               String
   awards             String
   createdAt          DateTime @default(now())
   committees         Json
@@ -38,8 +38,8 @@ model DoubleDelegate {
   d_email            String   @unique
   s_gender           String
   d_gender           String
-  s_year             Int
-  d_year             Int
+  s_year             String
+  d_year             String
   s_country          String
   d_country          String
   s_phone1           String

@@ -33,29 +33,29 @@ model SingleDelegate {
 model DoubleDelegate {
   id                 Int      @id @default(autoincrement())
   s_name             String
-  d_name             String
+  d_name             String?
   s_email            String   @unique
-  d_email            String   @unique
+  d_email            String?   @unique
   s_gender           String
-  d_gender           String
+  d_gender           String?
   s_year             String
-  d_year             String
+  d_year             String?
   s_country          String
-  d_country          String
+  d_country          String?
   s_phone1           String
   s_phone2           String
-  d_phone1           String
-  d_phone2           String
+  d_phone1           String?
+  d_phone2           String?
   s_course           String
-  d_course           String
+  d_course           String?
   s_college          String
-  d_college          String
+  d_college          String?
   s_age              Int
-  d_age              Int
+  d_age              Int?
   s_prevExp          String
-  d_prevExp          String
+  d_prevExp          String?
   s_awards           String
-  d_awards           String
+  d_awards           String?
   accommodation      String
   accommodation_type String?
   createdAt          DateTime @default(now())
